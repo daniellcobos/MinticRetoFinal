@@ -1,0 +1,991 @@
+{
+	"info": {
+		"_postman_id": "4872d5ba-feef-4f94-ad61-a6c0f4df1395",
+		"name": "MinTIC - CICLO4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RETO1",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "User Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"ricardocorazondeleon@gmail.com\",\n    \"name\":\"RICARDO CORAZON DE LEON\",\n    \"password\":\"Demo123.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User IsEmailPresent",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/ricardocorazondeleon@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"ricardocorazondeleon@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Authenticate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/fabio@quimbay.co/123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"fabio@quimbay.co",
+										"123"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REMOTE",
+					"item": [
+						{
+							"name": "User Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/user/all",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"ricardocorazondeleon@gmail.com\",\n    \"name\":\"RICARDO CORAZON DE LEON\",\n    \"password\":\"Demo123.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/new",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User IsEmailPresent",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/ricardocorazondeleon@gmail.com",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"ricardocorazondeleon@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Authenticate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/ricardocorazondeleon@gmail.com/Demo123.",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"ricardocorazondeleon@gmail.com",
+										"Demo123."
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RETO2",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "1. User New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"id\": 1,\n\"identification\": \"123123\",\n\"name\": \"CARLOS ALBERTO GARCIA\",\n\"address\": \"CR 34-45\",\n\"cellPhone\": \"311222222\",\n\"email\": \"cgarcia@gmail.com\",\n\"password\": \"Demo123.\",\n\"zone\": \"ZONA 2\",\n\"type\": \"ADM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. User Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3. User emailexist OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/emailexist/alanbrito@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"emailexist",
+										"alanbrito@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4. User emailexist Fail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/emailexist/alanbrito@hotmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"emailexist",
+										"alanbrito@hotmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5. Get User By Email and Password OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/alanbrito@gmail.com/Demo123.",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"alanbrito@gmail.com",
+										"Demo123."
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6. Get User By Email and Password Fail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/alanbrito@gmail.com/Demo12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"alanbrito@gmail.com",
+										"Demo12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7. Update User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"id\": 1, \n    \"identification\": \"1111112\", \n    \"name\": \"Alan Brito\", \n    \"address\": \"CR 19-45C 22\", \n    \"cellPhone\": \"31111111\", \n    \"email\": \"alanbrito@hotmail.com\", \n    \"password\": \"alanb\", \n    \"zone\": \"ZONA 2\", \n    \"type\": \"COORD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "8. Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "1. Fragance New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\": \"AP-903\",\n    \"brand\": \"Jaguar\",\n    \"category\": \"Cologne\",\n    \"presentation\": \"spray 1.7 oz\",\n    \"description\": \"vanilla, iris, musk, amber, sandalwood and rose.\",\n    \"availability\": true,\n    \"price\": 350000,\n    \"quantity\": 20,\n    \"photography\": \"www.catalog.com/sandalwood.png\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. Fragance Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3. Fragance User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\": \"AP-903\",\n    \"brand\": \"DIOR\",\n    \"category\": \"PERFUME\",\n    \"presentation\": \"1.7 oz\",\n    \"description\": \"amber, sandalwood and rose.\",\n    \"availability\": true,\n    \"price\": 450000,\n    \"quantity\": 25,\n    \"photography\": \"www.catalog.com/demo.png\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4. Delete Fragance",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/AP-903",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"AP-903"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5. Fragance Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REMOTE",
+					"item": [
+						{
+							"name": "1. User New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"id\": 1, \n    \"identification\": \"123456\", \n    \"name\": \"alan brito\", \n    \"address\": \"CR 34-45\", \n    \"cellPhone\": \"311222222\", \n    \"email\": \"alanbrito@gmail.com\", \n    \"password\": \"Demo123.\", \n    \"zone\": \"ZONA 1\", \n    \"type\": \"COORD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/new",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. User Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/user/all",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3. User emailexist OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/emailexist/alanbrito@gmail.com",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"emailexist",
+										"alanbrito@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4. User emailexist Fail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/emailexist/alanbrito@hotmail.com",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"emailexist",
+										"alanbrito@hotmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5. Get User By Email and Password OK",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/alanbrito@gmail.com/Demo123.",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"alanbrito@gmail.com",
+										"Demo123."
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6. Get User By Email and Password Fail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/alanbrito@gmail.com/Demo12",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"alanbrito@gmail.com",
+										"Demo12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7. Update User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"id\": 1, \n    \"identification\": \"1111112\", \n    \"name\": \"Alan Brito\", \n    \"address\": \"CR 19-45C 22\", \n    \"cellPhone\": \"31111111\", \n    \"email\": \"alanbrito@hotmail.com\", \n    \"password\": \"alanb\", \n    \"zone\": \"ZONA 2\", \n    \"type\": \"COORD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/user/update",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "8. Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/user/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "1. Fragance New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\": \"AP-903\",\n    \"brand\": \"Jaguar\",\n    \"category\": \"Cologne\",\n    \"presentation\": \"spray 1.7 oz\",\n    \"description\": \"vanilla, iris, musk, amber, sandalwood and rose.\",\n    \"availability\": true,\n    \"price\": 350000,\n    \"quantity\": 20,\n    \"photography\": \"www.catalog.com/sandalwood.png\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/fragance/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"fragance",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2. Fragance Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/fragance/all",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"fragance",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3. Fragance User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\": \"AP-903\",\n    \"brand\": \"DIOR\",\n    \"category\": \"PERFUME\",\n    \"presentation\": \"1.7 oz\",\n    \"description\": \"amber, sandalwood and rose.\",\n    \"availability\": true,\n    \"price\": 450000,\n    \"quantity\": 25,\n    \"photography\": \"www.catalog.com/demo.png\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/fragance/update",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"fragance",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4. Delete Fragance",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/fragance/AP-903",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"fragance",
+										"AP-903"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5. Fragance Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/fragance/all",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"fragance",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://144.22.232.202"
+		}
+	]
+}
