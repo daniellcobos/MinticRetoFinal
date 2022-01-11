@@ -1,12 +1,15 @@
 package co.edu.mintic.ciclo4.minticciclo4.controller;
 
+
 import co.edu.mintic.ciclo4.minticciclo4.kafka.Producer;
+import co.edu.mintic.ciclo4.minticciclo4.model.Login;
 import co.edu.mintic.ciclo4.minticciclo4.model.User;
 import co.edu.mintic.ciclo4.minticciclo4.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,7 +55,8 @@ public class UserController {
 
     @GetMapping("/{email}/{password}")
     public Optional<User> getUserByEmailAndPassword(@PathVariable("email") String email, @PathVariable("password") String password) {
-        producer.run(email);
+        Login kafka_message = new Login(email,new java.util.Date());
+        producer.run(kafka_message);
         return service.getUserByEmailAndPassword(email, password);
     }
 
@@ -64,4 +68,5 @@ public class UserController {
     public List<User> birthtDayList(@PathVariable("month") String monthBirthtDay) {
         return service.birthtDayList(monthBirthtDay);
     }
+
 }

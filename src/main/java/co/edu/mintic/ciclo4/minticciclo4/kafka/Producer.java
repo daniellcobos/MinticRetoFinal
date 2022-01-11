@@ -1,5 +1,6 @@
 package co.edu.mintic.ciclo4.minticciclo4.kafka;
 
+import co.edu.mintic.ciclo4.minticciclo4.model.Login;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -14,20 +15,20 @@ public class Producer {
     String bootstrapServers = "localhost:9092";
     String Topic = "login_topic";
     Properties properties = new Properties();
-    KafkaProducer<String,String> producer;
+    KafkaProducer<String,Login> producer;
     public Producer(){
 
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,StringSerializer.class.getName());
+        properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,LoginSerializer.class.getName());
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,bootstrapServers);
-        this.producer = new KafkaProducer<String,String>(properties);
+        this.producer = new KafkaProducer<String,Login>(properties);
     }
 
 
 
 
-    public void run(String message) {
-        ProducerRecord<String,String> record = new ProducerRecord<String,String>(Topic,message);
+    public void run(Login message) {
+        ProducerRecord<String, Login> record = new ProducerRecord<String,Login>(Topic,message);
         logger.info(message+ "Trata de entrar");
         producer.send(record);
         producer.flush();
