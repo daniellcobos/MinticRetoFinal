@@ -1,4 +1,4 @@
-#What do i do with this repo?
+# What do i do with this repo?
 
 Its just a demo of Spring Boot With MongoDB, download and then compile the Maven thing, if you are seeing this repo you should know how to run a Maven Project.
 
